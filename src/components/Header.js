@@ -64,12 +64,14 @@ const Header = () => {
           alignItems="center"
         >
           <nav>
-            <HStack>
-              {socials.map((social) => {
+            <HStack spacing={4}>
+              {socials.map((social, index) => {
                 return (
-                  <a href={social.url}>
-                    <FontAwesomeIcon icon={social.icon} size="2x" />
-                  </a>
+                  <Box key={index}>
+                    <a href={social.url}>
+                      <FontAwesomeIcon icon={social.icon} size="2x" />
+                    </a>
+                  </Box>
                 );
               })}
             </HStack>
